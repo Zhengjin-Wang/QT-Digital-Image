@@ -950,7 +950,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QGraphicsView" name="graphicsView1"/>
+        <widget class="MyGraphicsView" name="graphicsView1"/>
        </item>
        <item row="1" column="1">
         <widget class="QGraphicsView" name="graphicsView2"/>
@@ -981,7 +981,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="read_file_btn">
          <property name="text">
           <string>读取图片</string>
          </property>
@@ -1001,7 +1001,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="save_file_btn">
          <property name="text">
           <string>保存图片</string>
          </property>
@@ -1038,16 +1038,35 @@
     <property name="title">
      <string>图像处理</string>
     </property>
-    <addaction name="geo_trans"/>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>几何变换</string>
+     </property>
+     <addaction name="reloc_rotation_center"/>
+     <addaction name="basic_geo_trans"/>
+    </widget>
+    <addaction name="menu_2"/>
    </widget>
    <addaction name="menu"/>
   </widget>
-  <action name="geo_trans">
+  <action name="reloc_rotation_center">
    <property name="text">
-    <string>几何变换</string>
+    <string>重置旋转中心</string>
+   </property>
+  </action>
+  <action name="basic_geo_trans">
+   <property name="text">
+    <string>基础几何变换</string>
    </property>
   </action>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyGraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">mygraphicsview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -16,15 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    geotransdialog.cpp \
     main.cpp \
     mainwindow.cpp \
+    mygraphicsview.cpp \
     myimage.cpp
 
 HEADERS += \
+    geotransdialog.h \
     mainwindow.h \
+    mygraphicsview.h \
     myimage.h
 
 FORMS += \
+    geotransdialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

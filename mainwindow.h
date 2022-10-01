@@ -3,6 +3,7 @@
 
 #include "myimage.h"
 
+#include <QMouseEvent>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -17,14 +18,21 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+protected:
+    void mousePressEvent(QMouseEvent* event);
+
 private slots:
-    void on_pushButton_pressed();
 
-    void on_geo_trans_triggered();
+    void on_basic_geo_trans_triggered();
 
-    void on_pushButton_2_pressed();
+    void on_reloc_rotation_center_triggered();
+
+    void on_save_file_btn_pressed();
+
+    void on_read_file_btn_pressed();
 
 private:
+
     Ui::MainWindow *ui;
     MyImage* image; //原始图像
 };
